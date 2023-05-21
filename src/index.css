@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +8,74 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.country-detail {
+  background-color:wheat;
+  width: 75%;
+}
+
+#flag{
+  border: 2px solid black;
+  width: 90%;
+  margin: 5%;
+}
+
+#coat-of-arms{
+  width: 90%;
+  margin: 5%;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  background-color:honeydew;
+}
+
+header > h1 {
+  align-self: center;
+}
+
+.name-element {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.name-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+.name-box-full {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.name-box-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flag-box {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 35%;
+}
+
+.info-box{
+  padding-left: 2%;
+  width: 63%;
 }

@@ -1,9 +1,7 @@
-import SelectedItem from "./SelectedItem"
-
-const CountrySelect = ({countries, setSelectedCountry}) => {
+const CountrySelect = ({countries, setSelectedCountry, labelText}) => {
 
     const selectDropDown = countries.map( (country, index) => {
-        return <SelectedItem country={country} key={index} index={index}/>
+        return <option country={country} key={index} value={index}>{country.name.common}</option>
     })
 
     const onCountrySelected = function (index) {
@@ -19,11 +17,13 @@ const CountrySelect = ({countries, setSelectedCountry}) => {
     }
 
     return (
-
-        <select name="countries" id="country-select-box" onChange={handleSelect}>
-            <option value="">--Please choose a country--</option>
-            {selectDropDown}
-        </select>
+        <div className="select-box">
+            <label htmlFor="country-select-box">{labelText}</label>
+            <select name="countries" id="country-select-box" onChange={handleSelect}>
+                <option value="">--Please choose a country--</option>
+                {selectDropDown}
+            </select>
+        </div>
     )
 
 }
