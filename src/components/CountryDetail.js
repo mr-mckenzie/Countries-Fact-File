@@ -3,9 +3,7 @@ import PopulationElement from "./PopulationElement";
 
 const CountryDetail = ({country, worldPopulation, worldLandMass}) => {
 
-    //const flagUrl = country.flags.png
     const flagUrl = country.flags.svg
-    //const coatOfArmsUrl = country.coatOfArms.png
     const coatOfArmsUrl = country.coatOfArms.svg
 
     let region = country.region

@@ -8,26 +8,26 @@ const NameElement = ({country}) => {
     let keyArray = []
 
     if (country.name.nativeName) {
-        console.log("country has native name")
+        //console.log("country has native name")
         nativeNameObj = country.name.nativeName
-        console.log("native name obj:", nativeNameObj)
+        //console.log("native name obj:", nativeNameObj)
         keyArray = Object.keys(nativeNameObj)
         const englishIndex = keyArray.indexOf("eng")
-        console.log("key array: ", keyArray)
+        //console.log("key array: ", keyArray)
         if (englishIndex !== -1) {
             keyArray.splice(englishIndex, 1)
-            console.log("Eng detected, spliced key array: ", keyArray)
+            //console.log("Eng detected, spliced key array: ", keyArray)
         }
     } 
 
     for (let index = 0; index < keyArray.length; index++) {
         const key = keyArray[index]
-        console.log("A:", nativeNameObj[key].common)
-        console.log("B:", nativeNameObj[key].official)
+        //console.log("A:", nativeNameObj[key].common)
+        //console.log("B:", nativeNameObj[key].official)
         if (nativeNameObj[key].common === commonName && nativeNameObj[key].official === officialName){
-            console.log("we have a match eng name = native name")
+            //console.log("we have a match eng name = native name")
             keyArray.splice(index, 1)    
-            console.log("keyArray:", keyArray) 
+            //console.log("keyArray:", keyArray) 
             index--   
         }
     }
@@ -47,7 +47,7 @@ const NameElement = ({country}) => {
 
     //adds english name to front of array
     elementToDisplayArray.unshift([commonName, officialName])
-    console.log("array of elements to display:", elementToDisplayArray)
+    //console.log("array of elements to display:", elementToDisplayArray)
 
     const arrayOfElements = elementToDisplayArray.map( (nameElement, index) => {
         const common = nameElement[0]
@@ -76,12 +76,6 @@ const NameElement = ({country}) => {
         }
 
     })
-
-    //TODO split this up for if there are more than one native name 
-    //display it on the next line with english on top
-
-    //if there is one single native name along with english, if
-    //the common name is the same do not display it twice
 
     return (
       <aside className="name-element">

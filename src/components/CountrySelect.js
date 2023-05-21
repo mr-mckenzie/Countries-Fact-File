@@ -6,8 +6,7 @@ const CountrySelect = ({countries, setSelectedCountry, labelText}) => {
 
     const onCountrySelected = function (index) {
         setSelectedCountry(countries[index])
-        console.log("index:", index)
-        //console.log(countries[])
+        //console.log("index:", index)
     }
 
 

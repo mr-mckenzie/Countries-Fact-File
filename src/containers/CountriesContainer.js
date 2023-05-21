@@ -32,6 +32,7 @@ const CountryContainer = () => {
         .then(countries => setCountries(sortCountriesAlphabetically(countries)))
     }
 
+    //TODO when user selects a country, compare area, population etc...
     const [comparisonCountry, setComparisonCountry] = useState(null)
 
     const worldPopulation = countries.reduce((accumulator, country) => {
@@ -41,10 +42,6 @@ const CountryContainer = () => {
     const worldLandMass = countries.reduce((accumulator, country) => {
         return accumulator + country.area
     }, 0)
-
-    // const onCountrySelected = function (country) {
-    //     setSelectedCountry(country)
-    // }
 
     return (
         <>
